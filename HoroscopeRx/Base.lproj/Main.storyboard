@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,92 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HoroscopeRx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2P-bP-IsC">
+                                <rect key="frame" x="16" y="45" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5eU-tv-xM0">
+                                <rect key="frame" x="16" y="90" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City of birth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVY-6h-3l9">
+                                <rect key="frame" x="16" y="140" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtX-Qg-NfK">
+                                <rect key="frame" x="16" y="192" width="52" height="30"/>
+                                <state key="normal" title="Woman"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5o-Bw-53M">
+                                <rect key="frame" x="274" y="192" width="30" height="30"/>
+                                <state key="normal" title="Man"/>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lnW-L5-zeO">
+                                <rect key="frame" x="0.0" y="251" width="320" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="W9R-iR-vwT"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="548608568.40884602">
+                                    <!--2018-05-21 15:16:08 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTG-9Q-cdO">
+                                <rect key="frame" x="149" y="518" width="155" height="30"/>
+                                <state key="normal" title="Check your horoscope"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="lnW-L5-zeO" firstAttribute="top" secondItem="EtX-Qg-NfK" secondAttribute="bottom" constant="29" id="16r-F5-YVw"/>
+                            <constraint firstItem="EtX-Qg-NfK" firstAttribute="baseline" secondItem="a5o-Bw-53M" secondAttribute="baseline" id="4My-UK-rs0"/>
+                            <constraint firstItem="UVY-6h-3l9" firstAttribute="top" secondItem="5eU-tv-xM0" secondAttribute="bottom" constant="20" id="4kn-5o-U3w"/>
+                            <constraint firstItem="5eU-tv-xM0" firstAttribute="leading" secondItem="UVY-6h-3l9" secondAttribute="leading" id="6wb-CQ-I3h"/>
+                            <constraint firstAttribute="bottom" secondItem="TTG-9Q-cdO" secondAttribute="bottom" constant="20" symbolic="YES" id="Aap-pd-Mvs"/>
+                            <constraint firstItem="UVY-6h-3l9" firstAttribute="leading" secondItem="EtX-Qg-NfK" secondAttribute="leading" id="GDs-KQ-LiI"/>
+                            <constraint firstItem="v2P-bP-IsC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="KOs-Rp-qf2"/>
+                            <constraint firstItem="a5o-Bw-53M" firstAttribute="trailing" secondItem="TTG-9Q-cdO" secondAttribute="trailing" id="Mf2-2b-JAz"/>
+                            <constraint firstItem="v2P-bP-IsC" firstAttribute="trailing" secondItem="5eU-tv-xM0" secondAttribute="trailing" id="SGK-d1-jUY"/>
+                            <constraint firstItem="v2P-bP-IsC" firstAttribute="leading" secondItem="5eU-tv-xM0" secondAttribute="leading" id="Wix-Pm-TNN"/>
+                            <constraint firstItem="lnW-L5-zeO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e5k-Pj-N0v"/>
+                            <constraint firstItem="UVY-6h-3l9" firstAttribute="centerX" secondItem="lnW-L5-zeO" secondAttribute="centerX" id="jzE-N4-RVx"/>
+                            <constraint firstItem="UVY-6h-3l9" firstAttribute="trailing" secondItem="a5o-Bw-53M" secondAttribute="trailing" id="lN6-ig-K8e"/>
+                            <constraint firstItem="EtX-Qg-NfK" firstAttribute="top" secondItem="UVY-6h-3l9" secondAttribute="bottom" constant="22" id="nbe-PN-ZRr"/>
+                            <constraint firstItem="5eU-tv-xM0" firstAttribute="trailing" secondItem="UVY-6h-3l9" secondAttribute="trailing" id="rYw-f6-utV"/>
+                            <constraint firstItem="v2P-bP-IsC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="v9o-f6-bjw"/>
+                            <constraint firstItem="5eU-tv-xM0" firstAttribute="top" secondItem="v2P-bP-IsC" secondAttribute="bottom" constant="15" id="yZa-nX-xA7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SF9-Nn-UV1" appends="YES" id="SmN-RO-mk1"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="checkHoroscopeButton" destination="TTG-9Q-cdO" id="Cwy-DD-Jr7"/>
+                        <outlet property="cityOfBirthTextField" destination="UVY-6h-3l9" id="RbF-uM-H72"/>
+                        <outlet property="datePicker" destination="lnW-L5-zeO" id="AXK-gQ-3tJ"/>
+                        <outlet property="emailTextField" destination="5eU-tv-xM0" id="MVl-Rf-jXs"/>
+                        <outlet property="fullNameTextField" destination="v2P-bP-IsC" id="TDl-eQ-GMI"/>
+                        <outlet property="manButton" destination="a5o-Bw-53M" id="lMW-YV-1GN"/>
+                        <outlet property="tapGestureRecognizer" destination="SF9-Nn-UV1" id="MKI-oL-Ct9"/>
+                        <outlet property="womanButton" destination="EtX-Qg-NfK" id="omI-z7-oTc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SF9-Nn-UV1"/>
             </objects>
+            <point key="canvasLocation" x="24.375" y="28.52112676056338"/>
         </scene>
     </scenes>
 </document>
